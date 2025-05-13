@@ -1,17 +1,19 @@
 package com.cognizant.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Adopter implements Serializable {
-  private int adopterId;
+  private int id;
   private String name;
-  private String contactInfo;
+  private String email;
   private List<Pet> adoptedPets = new ArrayList<>();
   
-  public Adopter(int adopterId, String name, String contactInfo) {
-    this.adopterId = adopterId;
+  public Adopter(int id, String name, String contactInfo) {
+    this.id = id;
     this.name = name;
-    this.contactInfo = contactInfo;
+    this.email = contactInfo;
   }
   
   public void adoptPet(Pet pet) {
@@ -19,10 +21,10 @@ public class Adopter implements Serializable {
   }
   
   public String getInfo() {
-    return name + " (" + contactInfo + "), Pets Adopted: " + adoptedPets.size();
+    return name + " (" + email + "), Pets Adopted: " + adoptedPets.size();
   }
   
-  public int getAdopterId() {
-    return adopterId;
+  public int getId() {
+    return id;
   }
 }

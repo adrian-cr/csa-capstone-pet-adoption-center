@@ -22,32 +22,25 @@ public abstract class Pet implements Adoptable, Vaccinable, Serializable {
     this.age = age;
     this.breed = breed;
     this.isAdopted = false;
-  }
+  }//Pet - constructor
   
-  public String getSpecies() {
-    return species;
-  }
-  
-  public int getAge() {
-    return age;
-  }
-  
-  public String getBreed() {
-    return breed;
-  }
-  
-  public boolean isAdopted() {
-    return isAdopted;
-  }
-  
-  public boolean isAvailable() {
-    return !isAdopted;
-  }
-  
+  /* Getters: */
   public int getId() {
     return id;
   }//getId()
+  public String getSpecies() {
+    return species;
+  }//getSpecies()
+  public String getBreed() {
+    return breed;
+  }//getBreed()
   
+  /* Instance methods: */
+  public boolean isAvailable() {
+    return !isAdopted;
+  }//isAvailable()
+  
+  /* Overridden methods: */
   @Override
   public String toString() {
     return
@@ -57,6 +50,7 @@ public abstract class Pet implements Adoptable, Vaccinable, Serializable {
       "\nAge: " + age + " years" +
       "\nStatus: " + (isAdopted? "Adopted" : "Available");
   }//toString()
-}
+
+}//Pet
 
 

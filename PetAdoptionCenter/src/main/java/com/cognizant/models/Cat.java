@@ -22,7 +22,6 @@ public class Cat extends Pet {
     vaccinesGiven.add(vaccine);
     System.out.println(name + " has been vaccinated.");
   }//vaccinate()
-  
   public void adopt() {
     if (isAdopted) throw new AlreadyAdoptedException(id);
     isAdopted = true;
